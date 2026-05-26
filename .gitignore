@@ -40,3 +40,26 @@ src/main.cpp
 
 # VS Code
 **/.vscode
+
+# JetBrains IDEs
+**/.idea
+
+# Arduino / Arduino CLI build output
+build/
+**/build/
+*.hex
+*.bin
+*.elf
+*.map
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+.clang_complete
+.gcc-flags.json
+
+# Python tooling sometimes used in helper scripts
+__pycache__/
+*.pyc
+.venv/

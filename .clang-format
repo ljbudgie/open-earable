@@ -1,0 +1,21 @@
+---
+# Baseline clang-format style for OpenEarable firmware sources.
+# Applied to files under src/ by the pre-commit hook in
+# .pre-commit-config.yaml. Chosen to be close to the existing Arduino /
+# K&R-flavoured style already used in the codebase rather than imposing a
+# new one.
+BasedOnStyle: Google
+Language: Cpp
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+AccessModifierOffset: -4
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+BreakBeforeBraces: Attach
+DerivePointerAlignment: false
+PointerAlignment: Left
+SortIncludes: false
+SpacesBeforeTrailingComments: 2
