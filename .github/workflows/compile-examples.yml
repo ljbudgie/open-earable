@@ -1,0 +1,43 @@
+name: Compile examples
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  compile:
+    name: Compile (${{ matrix.board.name }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        board:
+          - name: Arduino Nano 33 BLE Sense (mbed_nano)
+            fqbn: arduino:mbed_nano:nano33ble
+            platforms: |
+              - name: arduino:mbed_nano
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile example sketches
+        uses: arduino/compile-sketches@v1
+        with:
+          fqbn: ${{ matrix.board.fqbn }}
+          platforms: ${{ matrix.board.platforms }}
+          sketch-paths: |
+            - examples
+          libraries: |
+            - source-path: ./
+            - name: ArduinoBLE
+            - name: Adafruit BMP280 Library
+            - name: DFRobot_BMX160
+            - name: Arduino_LPS22HB
+            - name: STM32duino LSM6DSR
+          enable-deltas-report: true
+          verbose: false

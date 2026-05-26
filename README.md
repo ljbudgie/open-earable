@@ -46,6 +46,8 @@ For more information visit the [OpenEarable](https://open-earable.teco.edu/) web
 
 OpenEarable is controlled and streams sensor data via BLE (Bluetooth Low Energy). Audio is played from and recorded to the internal SD card (required card SanDisk Extreme Class 3, must be formatted as exFAT). OpenEarable is compatible with the provided [dashboard](https://github.com/OpenEarable/dashboard) and [edge-ml](https://edge-ml.org/). 
 
+> **Downstream projects:** [OpenHear](https://github.com/ljbudgie/openhear) is an independent, sovereign-audio DSP and haptic-wristband project (Python) that can treat OpenEarable as one possible in-ear sensing source. It is not required to use OpenEarable and is licensed separately — see [`HARDWARE.md`](HARDWARE.md) for cross-references.
+
 
 ## Setup
 **⚠️ $${\rm\color{red}Please~Note:}$$ We recommend deploying the firmware using the  [open-earable-PlatformIO wrapper](https://github.com/OpenEarable/open-earable-PlatformIO).**
